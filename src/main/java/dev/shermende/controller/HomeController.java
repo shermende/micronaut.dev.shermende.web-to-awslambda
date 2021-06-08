@@ -18,9 +18,9 @@ public class HomeController {
     public HomeModel post(
             @Valid @Body HomeResource resource
     ) {
-        log.info("Hello Abdys: {}", resource);
+        log.info("hello: {}", resource);
         return HomeModel.builder()
-                .name(String.format("abdyswebdemo-%s", resource.getName()))
+                .name(String.format("hello-%s", resource.getName()))
                 .uuid(UUID.randomUUID().toString())
                 .build();
     }
